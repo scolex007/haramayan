@@ -1,16 +1,131 @@
-# React + Vite
+# Haramayan Itinakdang Makatulong (HIM) Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive single-page website for HIM - The Best Social Welfare Service Program ONLINE.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Single-Page Navigation**: Smooth scrolling navigation between sections
+- **Responsive Design**: Optimized for both mobile and web browsing
+- **Greenish Theme**: Professional green color palette throughout the design
+- **Comprehensive Sections**:
+  - Hero section with compelling call-to-action
+  - Why Choose HIM - highlighting key benefits
+  - About Us - organization story and mission
+  - Programs - detailed service offerings
+  - Membership - information and FAQs
+- **Authentication Integration**: Login and Register buttons redirect to secure.haramayan.com
+- **Mobile-Friendly**: Hamburger menu and responsive layout
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React** - UI library
+- **Vite** - Build tool and dev server
+- **Tailwind CSS** - Utility-first CSS framework
 
-## Expanding the ESLint configuration
+## Development
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+
+- Node.js (v16 or higher)
+- npm or yarn
+
+### Installation
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+```
+
+The development server will start at `http://localhost:5173`
+
+### Build for Production
+
+```bash
+# Create production build
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+## Deployment to Vercel
+
+### Option 1: Deploy via Vercel CLI
+
+1. Install Vercel CLI:
+```bash
+npm install -g vercel
+```
+
+2. Deploy:
+```bash
+cd haramayan-web
+vercel
+```
+
+3. Follow the prompts to complete deployment
+
+### Option 2: Deploy via Vercel Dashboard
+
+1. Go to [vercel.com](https://vercel.com)
+2. Click "Add New Project"
+3. Import your GitHub repository
+4. Select the `haramayan-web` directory as the root directory
+5. Vercel will automatically detect Vite configuration
+6. Click "Deploy"
+
+### Option 3: Deploy via GitHub Integration
+
+1. Connect your GitHub repository to Vercel
+2. Configure the project:
+   - **Framework Preset**: Vite
+   - **Root Directory**: haramayan-web
+   - **Build Command**: npm run build
+   - **Output Directory**: dist
+3. Deploy automatically on every push to main branch
+
+## Project Structure
+
+```
+haramayan-web/
+├── public/          # Static assets
+├── src/
+│   ├── App.jsx     # Main application component
+│   ├── App.css     # Component styles
+│   ├── index.css   # Global styles with Tailwind directives
+│   └── main.jsx    # Application entry point
+├── index.html      # HTML template
+├── package.json    # Dependencies and scripts
+├── tailwind.config.js  # Tailwind configuration
+├── vite.config.js  # Vite configuration
+└── vercel.json     # Vercel deployment configuration
+```
+
+## Configuration
+
+### Tailwind Colors
+
+The project uses a custom green color palette defined in `tailwind.config.js`:
+- Primary colors range from 50 (lightest) to 900 (darkest)
+- Main brand color: `primary-600`
+
+### External Links
+
+- Login: https://secure.haramayan.com/page-auth-login.php
+- Register: https://secure.haramayan.com/page-auth-register.php
+
+## Contact
+
+For more information about HIM:
+- Email: jegessentialcollegesinc@gmail.com
+- Phone: 0995-389-5071
+- Address: Essential School, Bongabon Nueva Ecija
+- Contact Person: Javier Garde
+
+## License
+
+© 2024 HIM Plus International Organization. All rights reserved.
+Recognized by Central Luzon Conference since 2015
