@@ -498,7 +498,7 @@ function App() {
             </div>
 
             {/* Funeral Assistance */}
-            <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+            <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow border-2 border-primary-200">
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 bg-primary-600 rounded-full flex items-center justify-center mr-4">
                   <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -507,13 +507,28 @@ function App() {
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900">Funeral Assistance</h3>
               </div>
-              <p className="text-gray-700 mb-4">In the most difficult times, we're here for you.</p>
+              <p className="text-gray-700 mb-3">In the most difficult times, we're here for you.</p>
+              <div className="bg-primary-50 p-3 rounded-lg mb-4">
+                <p className="text-primary-700 font-bold text-sm">💰 Special Benefit: Doubled coverage for funeral assistance</p>
+              </div>
               <div className="space-y-3">
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">What's covered:</h4>
-                  <ul className="text-gray-700 space-y-1 text-sm">
-                    <li>• Primary Member: ₱400 to ₱80,000 (DOUBLE)</li>
-                    <li>• Dependents: ₱200 to ₱40,000 (DOUBLE)</li>
+                  <h4 className="font-semibold text-gray-900 mb-2">What's covered (Doubled Benefits):</h4>
+                  <ul className="text-gray-700 space-y-2 text-sm">
+                    <li className="flex items-start">
+                      <span className="text-primary-600 mr-2 font-bold">•</span>
+                      <div>
+                        <span className="font-semibold">Member:</span> ₱400 to ₱80,000<br/>
+                        <span className="text-xs text-gray-600">(Doubled the prevailing brackets)</span>
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary-600 mr-2 font-bold">•</span>
+                      <div>
+                        <span className="font-semibold">Dependents:</span> ₱200 to ₱40,000<br/>
+                        <span className="text-xs text-gray-600">(Doubled the prevailing brackets)</span>
+                      </div>
+                    </li>
                     <li>• Funeral and burial expenses</li>
                     <li>• Documentation support</li>
                   </ul>
