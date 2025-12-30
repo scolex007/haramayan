@@ -1,13 +1,14 @@
 export default function VideoHero({ video }) {
   return (
-    <div className="relative rounded-lg overflow-hidden shadow-2xl mb-12">
-      <div className="aspect-video bg-gray-900">
+    <div className="relative rounded-lg overflow-hidden shadow-2xl mb-12 bg-gray-900">
+      {/* Portrait Video Container */}
+      <div className="flex justify-center items-center max-h-[600px]">
         <video
           src={video.src}
           controls
           preload="metadata"
           playsInline
-          className="w-full h-full object-cover"
+          className="max-h-[600px] w-auto max-w-full object-contain"
         >
           Your browser does not support the video tag.
         </video>
