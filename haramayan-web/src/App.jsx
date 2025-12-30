@@ -1,12 +1,14 @@
 import { useState, useEffect } from 'react';
+import TestimonialsSection from './components/testimonials/TestimonialsSection';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+  const [showFullStory, setShowFullStory] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'programs', 'membership'];
+      const sections = ['home', 'about', 'testimonials', 'programs', 'membership'];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
@@ -61,6 +63,14 @@ function App() {
                 }`}
               >
                 About Us
+              </button>
+              <button
+                onClick={() => scrollToSection('testimonials')}
+                className={`text-sm font-medium transition-colors ${
+                  activeSection === 'testimonials' ? 'text-primary-600' : 'text-gray-700 hover:text-primary-600'
+                }`}
+              >
+                Testimonials
               </button>
               <button
                 onClick={() => scrollToSection('programs')}
@@ -129,6 +139,12 @@ function App() {
                 className="block w-full text-left px-3 py-2 text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-md"
               >
                 About Us
+              </button>
+              <button
+                onClick={() => scrollToSection('testimonials')}
+                className="block w-full text-left px-3 py-2 text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-md"
+              >
+                Testimonials
               </button>
               <button
                 onClick={() => scrollToSection('programs')}
@@ -296,6 +312,9 @@ function App() {
         </div>
       </section>
 
+      {/* Real Stories, Real Hope - Testimonials */}
+      <TestimonialsSection />
+
       {/* About Us Section */}
       <section id="about" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -307,21 +326,101 @@ function App() {
             {/* Beginning */}
             <div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">The Beginning of a Mission</h3>
-              <p className="text-gray-700 leading-relaxed">
-                In 2015, Central Luzon Conference recognized Help Intended Ministry (HIM) as a supporting ministry
-                with the mission to provide genuine help to those in need. But our story goes back even further.
-                HIM's inspiration came from the historical damayan program that started in Bongabon, Nueva Ecija in 1995.
-                We witnessed how the simple concept of "mutual aid" brought tremendous change to people's lives.
-                But we also knew we needed to adapt to modern times.
+              <h4 className="text-xl font-semibold text-primary-700 mb-3">The Haranista Legacy</h4>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                HIM's roots trace back to the <strong>Haranista</strong>, a founding group of compassionate elders in
+                Bongabon, Nueva Ecija, who pioneered the spirit of mutual aid approximately 30 years ago. When a member
+                passed away, the Haranista came together—contributing financially from their own pockets and singing during
+                wakes to comfort grieving families. This tradition later expanded to include dance, creating a beautiful
+                expression of community solidarity.
               </p>
+
+              {/* Collapsible Full Story */}
+              {showFullStory && (
+                <div className="space-y-6 animate-fadeIn">
+                  <p className="text-gray-700 leading-relaxed">
+                    The Haranista movement spread throughout the country as people witnessed its profound impact during
+                    times of loss. However, as the group grew, management challenges led to fragmentation into smaller groups.
+                    The original vision, while powerful, remained limited to funeral assistance only.
+                  </p>
+
+                  <div className="bg-primary-50 p-6 rounded-lg">
+                    <h4 className="text-xl font-semibold text-gray-900 mb-3">The Birth of HIM</h4>
+                    <p className="text-gray-700 leading-relaxed mb-3">
+                      One of the Haranista leaders approached me to become their adviser, offering free monthly contributions
+                      as an incentive. I suggested expanding their services to include medical assistance for members during
+                      sickness—not just funerals. While they appreciated the idea, their commitment remained solely focused on
+                      funeral support.
+                    </p>
+                    <p className="text-gray-700 leading-relaxed mb-3">
+                      Instead, these leaders and their assistants encouraged me to form my own group and implement my vision.
+                      They believed this broader program would serve the community better. For several nights, I couldn't sleep.
+                      It felt as if God was speaking to me, urging me to answer the people's call.
+                    </p>
+                    <p className="text-gray-700 leading-relaxed">
+                      Finally, I prayed and dedicated myself to follow what I believed was God's voice speaking through these people.
+                      On <strong>June 12, 2014</strong>, Help Intended Ministry (HIM) was born—with its Tagalog translation:
+                      <em> Harana at Damayan</em>, or <strong>Haramayan Itinakdang Makatulong</strong>.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 className="text-xl font-semibold text-gray-900 mb-3">From Local Roots to International Reach</h4>
+                    <p className="text-gray-700 leading-relaxed mb-3">
+                      HIM began serving Seventh-day Adventist church brethren in our town, then expanded to nearby church
+                      communities and the broader public. We provided financial assistance and spiritual inspiration to members
+                      and their dependents for medical, accidental, natal, and funeral needs.
+                    </p>
+                    <p className="text-gray-700 leading-relaxed mb-3">
+                      God blessed the ministry with many members. During the pandemic, numbers declined, but the mission continued.
+                      Then came a pivotal moment: during HIM's tenth-year anniversary, Pastor Andoy delivered a message challenging
+                      us to soar high and dominate.
+                    </p>
+                    <p className="text-gray-700 leading-relaxed mb-3">
+                      To materialize this vision, God intervened by inspiring us to upgrade from manual to digital operations.
+                      This transformation enabled us to serve wider, faster, and more strategically. With this digital evolution,
+                      HIM became <strong>HIM Plus International Organization (HPIO)</strong>—duly registered with the Security and
+                      Exchange Commission (SEC) and adopted by churches and other associations.
+                    </p>
+                    <p className="text-gray-700 leading-relaxed">
+                      Today, HPIO remains a recognized supporting ministry of the Central Luzon Conference of Seventh-day Adventists,
+                      continuing the Haranista legacy while expanding the vision to serve communities worldwide.
+                    </p>
+                  </div>
+                </div>
+              )}
+
+              {/* Read More Button */}
+              <div className="mt-6">
+                <button
+                  onClick={() => setShowFullStory(!showFullStory)}
+                  className="inline-flex items-center px-6 py-3 text-sm font-medium text-primary-700 bg-primary-50 rounded-lg hover:bg-primary-100 transition-colors"
+                >
+                  {showFullStory ? (
+                    <>
+                      <span>Show Less</span>
+                      <svg className="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+                      </svg>
+                    </>
+                  ) : (
+                    <>
+                      <span>Read Our Full Story</span>
+                      <svg className="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </>
+                  )}
+                </button>
+              </div>
             </div>
 
             {/* Decade of Service */}
             <div className="bg-primary-50 p-8 rounded-lg">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">A Decade of Service</h3>
               <p className="text-gray-700 leading-relaxed mb-4">
-                From 2015 to the present, we've remained faithful to our mission: to serve with heart, integrity,
-                and genuine care. Over these 10 years:
+                From our founding on June 12, 2014, and official recognition in 2015 to the present, we have remained
+                faithful to our mission: to serve with heart, integrity, and genuine care. Over these years:
               </p>
               <ul className="space-y-2 text-gray-700">
                 <li className="flex items-start">
@@ -367,6 +466,29 @@ function App() {
               </div>
             </div>
 
+            {/* Biblical Foundation */}
+            <div className="bg-gradient-to-r from-primary-50 to-primary-100 p-8 rounded-lg">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Foundation: Biblical Principles</h3>
+              <p className="text-gray-700 leading-relaxed mb-4">We are guided by stories such as:</p>
+              <div className="space-y-4">
+                <div className="bg-white p-4 rounded-lg">
+                  <h4 className="font-semibold text-primary-700 mb-2">The Good Samaritan (Luke 10:25-37)</h4>
+                  <p className="text-gray-700 text-sm">
+                    Which teaches us that a true neighbor is one willing to help even strangers.
+                  </p>
+                </div>
+                <div className="bg-white p-4 rounded-lg">
+                  <h4 className="font-semibold text-primary-700 mb-2">The Good and Faithful Servant (Matthew 25:14-30)</h4>
+                  <p className="text-gray-700 text-sm">
+                    Which inspires us to use our talents and resources for the benefit of many.
+                  </p>
+                </div>
+              </div>
+              <p className="text-gray-700 leading-relaxed mt-4 italic">
+                We're not perfect, but every day, we strive to be God's instruments in meeting your needs.
+              </p>
+            </div>
+
             {/* Mission & Vision */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-primary-600 text-white p-8 rounded-lg">
@@ -383,6 +505,28 @@ function App() {
                   A community where no one stands alone in times of need – where every member experiences
                   compassion, dignity, and hope.
                 </p>
+              </div>
+            </div>
+
+            {/* Recognition */}
+            <div className="bg-white border-2 border-primary-200 p-8 rounded-lg">
+              <h3 className="text-2xl font-bold text-center text-gray-900 mb-6">Recognition and Trust</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                <div>
+                  <div className="text-4xl mb-2">✓</div>
+                  <h4 className="font-bold text-gray-900 mb-2">CLC Supporting Ministry</h4>
+                  <p className="text-gray-700 text-sm">Officially recognized since 2015</p>
+                </div>
+                <div>
+                  <div className="text-4xl mb-2">🎉</div>
+                  <h4 className="font-bold text-gray-900 mb-2">10 Years of Service</h4>
+                  <p className="text-gray-700 text-sm">A decade proving our commitment</p>
+                </div>
+                <div>
+                  <div className="text-4xl mb-2">✝️</div>
+                  <h4 className="font-bold text-gray-900 mb-2">Rooted in Faith</h4>
+                  <p className="text-gray-700 text-sm">Service is more than obligation</p>
+                </div>
               </div>
             </div>
           </div>
@@ -730,6 +874,9 @@ function App() {
                 </button>
                 <button onClick={() => scrollToSection('about')} className="block text-gray-400 hover:text-white">
                   About Us
+                </button>
+                <button onClick={() => scrollToSection('testimonials')} className="block text-gray-400 hover:text-white">
+                  Testimonials
                 </button>
                 <button onClick={() => scrollToSection('programs')} className="block text-gray-400 hover:text-white">
                   Programs

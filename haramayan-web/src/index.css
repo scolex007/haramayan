@@ -22,3 +22,54 @@
     @apply font-sans antialiased;
   }
 }
+
+@layer utilities {
+  .animate-fadeIn {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Carousel slide transition */
+  .carousel-slide {
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Lightbox backdrop animation */
+  @keyframes fadeInBackdrop {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Image hover zoom */
+  .testimonial-image-zoom {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .testimonial-image-zoom:hover {
+    transform: scale(1.05);
+  }
+
+  /* Respect reduced motion preference */
+  @media (prefers-reduced-motion: reduce) {
+    .animate-fadeIn,
+    .carousel-slide,
+    .testimonial-image-zoom {
+      animation: none;
+      transition: none;
+    }
+  }
+}
