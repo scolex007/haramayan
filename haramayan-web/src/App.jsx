@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import TestimonialsSection from './components/testimonials/TestimonialsSection';
+import ContactSection from './components/contact/ContactSection';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -8,7 +9,7 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'testimonials', 'programs', 'membership'];
+      const sections = ['home', 'about', 'testimonials', 'programs', 'membership', 'contact'];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
@@ -96,6 +97,14 @@ function App() {
               >
                 Membership
               </button>
+              <button
+                onClick={() => scrollToSection('contact')}
+                className={`text-sm font-medium transition-colors ${
+                  activeSection === 'contact' ? 'text-primary-600' : 'text-gray-700 hover:text-primary-600'
+                }`}
+              >
+                Contact
+              </button>
             </div>
 
             {/* Login/Register Buttons */}
@@ -165,6 +174,12 @@ function App() {
                 className="block w-full text-left px-3 py-2 text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-md"
               >
                 Membership
+              </button>
+              <button
+                onClick={() => scrollToSection('contact')}
+                className="block w-full text-left px-3 py-2 text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-md"
+              >
+                Contact
               </button>
               <div className="pt-4 space-y-2">
                 <a
@@ -928,14 +943,17 @@ function App() {
             <p className="text-xl mb-8 max-w-2xl mx-auto">
               "Two are better than one... For if they fall, one will lift up his companion." – Ecclesiastes 4:9-10
             </p>
-            <div className="space-y-3 mb-8">
-              <p className="text-lg">
-                📧 Email: <a href="mailto:jegessentialcollegesinc@gmail.com" className="underline">jegessentialcollegesinc@gmail.com</a>
-              </p>
+            <div className="space-y-3 mb-6">
               <p className="text-lg">📱 Phone: 0995-389-5071</p>
               <p className="text-lg">📍 Essential School, Bongabon Nueva Ecija</p>
               <p className="text-lg">Contact Person: Javier Garde</p>
             </div>
+            <button
+              onClick={() => scrollToSection('contact')}
+              className="mb-8 px-6 py-3 text-lg font-medium text-primary-700 border-2 border-white rounded-lg hover:bg-white/10 transition-colors"
+            >
+              📧 Send Us a Message
+            </button>
             <a
               href="https://secure.haramayan.com/page-auth-register.php"
               className="inline-block px-8 py-4 text-lg font-semibold bg-white text-primary-700 rounded-lg hover:bg-gray-100 transition-colors shadow-lg"
@@ -945,6 +963,9 @@ function App() {
           </div>
         </div>
       </section>
+
+      {/* Contact Section */}
+      <ContactSection />
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
@@ -989,7 +1010,12 @@ function App() {
             <div>
               <h3 className="text-xl font-bold mb-4">Contact Us</h3>
               <div className="space-y-2 text-gray-400">
-                <p>📧 jegessentialcollegesinc@gmail.com</p>
+                <button
+                  onClick={() => scrollToSection('contact')}
+                  className="text-left hover:text-white transition-colors"
+                >
+                  📧 Contact Form
+                </button>
                 <p>📱 0995-389-5071</p>
                 <p>📍 Essential School, Bongabon Nueva Ecija</p>
               </div>
