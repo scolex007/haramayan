@@ -42,8 +42,16 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
-            <div className="flex items-center">
-              <span className="text-2xl font-bold text-primary-700">HIM</span>
+            <div className="flex items-center gap-3">
+              <img
+                src="/logos/hpi-logo.png"
+                alt="HIM Plus International Organization"
+                className="h-12 w-12 md:h-14 md:w-14"
+              />
+              <div className="flex flex-col">
+                <span className="text-xl md:text-2xl font-bold text-primary-700 leading-tight">HIM</span>
+                <span className="text-[10px] md:text-xs text-primary-600 leading-tight">HIM Plus International</span>
+              </div>
             </div>
 
             {/* Desktop Navigation */}
@@ -181,6 +189,15 @@ function App() {
       <section id="home" className="pt-16 bg-gradient-to-br from-primary-50 to-primary-100 min-h-screen flex items-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
+            {/* HPI Logo Badge */}
+            <div className="flex justify-center mb-6">
+              <img
+                src="/logos/hpi-logo.png"
+                alt="HIM Plus International Organization"
+                className="h-40 w-40 md:h-48 md:w-48 lg:h-56 lg:w-56 drop-shadow-lg"
+              />
+            </div>
+
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-6">
               No One Stands Alone<br />
               <span className="text-primary-700">in Times of Need</span>
@@ -511,7 +528,7 @@ function App() {
             {/* Recognition */}
             <div className="bg-white border-2 border-primary-200 p-8 rounded-lg">
               <h3 className="text-2xl font-bold text-center text-gray-900 mb-6">Recognition and Trust</h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
                 <div>
                   <div className="text-4xl mb-2">✓</div>
                   <h4 className="font-bold text-gray-900 mb-2">CLC Supporting Ministry</h4>
@@ -526,6 +543,17 @@ function App() {
                   <div className="text-4xl mb-2">✝️</div>
                   <h4 className="font-bold text-gray-900 mb-2">Rooted in Faith</h4>
                   <p className="text-gray-700 text-sm">Service is more than obligation</p>
+                </div>
+                <div>
+                  <div className="flex justify-center mb-2">
+                    <img
+                      src="/logos/hpi-logo.png"
+                      alt="HIM Plus International"
+                      className="h-16 w-16"
+                    />
+                  </div>
+                  <h4 className="font-bold text-gray-900 mb-2">HIM Plus International</h4>
+                  <p className="text-gray-700 text-sm">Officially registered organization</p>
                 </div>
               </div>
             </div>
@@ -861,9 +889,19 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div>
-              <h3 className="text-xl font-bold mb-4">HIM</h3>
-              <p className="text-gray-400">
+              <div className="flex items-center gap-3 mb-4">
+                <img
+                  src="/logos/hpi-logo.png"
+                  alt="HIM Plus International"
+                  className="h-16 w-16"
+                />
+                <h3 className="text-xl font-bold">HIM</h3>
+              </div>
+              <p className="text-gray-400 mb-3">
                 Haramayan Itinakdang Makatulong - The Best Social Welfare Service Program ONLINE
+              </p>
+              <p className="text-gray-400 text-sm">
+                HIM Plus International Organization (HPIO)
               </p>
             </div>
             <div>
