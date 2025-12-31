@@ -741,6 +741,68 @@ function App() {
         </div>
       </section>
 
+      {/* Claim Process Flow Section */}
+      <section className="py-20 bg-primary-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-6">
+            How to <span className="text-primary-700">Claim Benefits</span>
+          </h2>
+          <p className="text-center text-xl text-gray-700 mb-16 max-w-3xl mx-auto">
+            Our streamlined claim process ensures fast and secure benefit delivery to your account
+          </p>
+
+          {/* Flow Diagram */}
+          <div className="bg-primary-600 text-white p-8 rounded-lg">
+            <h3 className="text-2xl font-bold text-center mb-8">Claim Process Flow</h3>
+
+            {/* Three-step flow with arrows */}
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-6 items-center">
+              {/* Step 1 */}
+              <div className="text-center">
+                <div className="text-4xl mb-3">📝</div>
+                <h4 className="font-bold mb-2 text-xl">1. Fill Up Claim Form</h4>
+                <p className="text-sm">Submit your claim through the member portal</p>
+              </div>
+
+              {/* Arrow 1 (hidden on mobile) */}
+              <div className="hidden md:flex justify-center">
+                <svg className="w-12 h-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </div>
+
+              {/* Step 2 */}
+              <div className="text-center">
+                <div className="text-4xl mb-3">✅</div>
+                <h4 className="font-bold mb-2 text-xl">2. System Validation</h4>
+                <p className="text-sm">Automatic verification and approval</p>
+              </div>
+
+              {/* Arrow 2 (hidden on mobile) */}
+              <div className="hidden md:flex justify-center">
+                <svg className="w-12 h-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </div>
+
+              {/* Step 3 */}
+              <div className="text-center">
+                <div className="text-4xl mb-3">💰</div>
+                <h4 className="font-bold mb-2 text-xl">3. Receive Payment</h4>
+                <p className="text-sm">Cash sent directly to your GCash account</p>
+              </div>
+            </div>
+
+            {/* Additional Info */}
+            <div className="mt-8 bg-primary-700 p-4 rounded-lg text-center">
+              <p className="text-sm">
+                ⚡ Fast processing • 🔒 Secure transactions • 📱 Direct to your mobile wallet
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Membership Section */}
       <section id="membership" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -801,18 +863,18 @@ function App() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="text-center">
                 <div className="text-4xl mb-3">1</div>
-                <h4 className="font-bold mb-2">Inquire</h4>
-                <p className="text-sm">Contact us for initial consultation</p>
+                <h4 className="font-bold mb-2">Create an Online Account</h4>
+                <p className="text-sm">Fill up the online registration form</p>
               </div>
               <div className="text-center">
                 <div className="text-4xl mb-3">2</div>
-                <h4 className="font-bold mb-2">Prepare Documents</h4>
-                <p className="text-sm">Gather all required documents</p>
+                <h4 className="font-bold mb-2">Send Documents</h4>
+                <p className="text-sm">Submit all required documents</p>
               </div>
               <div className="text-center">
                 <div className="text-4xl mb-3">3</div>
-                <h4 className="font-bold mb-2">Submit & Join</h4>
-                <p className="text-sm">Complete application and orientation</p>
+                <h4 className="font-bold mb-2">Send Payment</h4>
+                <p className="text-sm">Complete your membership payment</p>
               </div>
             </div>
           </div>
