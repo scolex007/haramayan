@@ -945,12 +945,13 @@ function App() {
             </p>
             <div className="space-y-3 mb-6">
               <p className="text-lg">📱 Phone: 0995-389-5071</p>
+              <p className="text-lg">✉️ Email: <a href="mailto:hpiharamayan@gmail.com" className="hover:underline">hpiharamayan@gmail.com</a></p>
               <p className="text-lg">📍 Essential School, Bongabon Nueva Ecija</p>
               <p className="text-lg">Contact Person: Javier Garde</p>
             </div>
             <button
               onClick={() => scrollToSection('contact')}
-              className="mb-8 px-6 py-3 text-lg font-medium text-primary-700 border-2 border-white rounded-lg hover:bg-white/10 transition-colors"
+              className="mb-8 px-6 py-3 text-lg font-medium text-white border-2 border-white rounded-lg hover:bg-white/10 transition-colors"
             >
               📧 Send Us a Message
             </button>
@@ -1017,6 +1018,11 @@ function App() {
                   📧 Contact Form
                 </button>
                 <p>📱 0995-389-5071</p>
+                <p>
+                  <a href="mailto:hpiharamayan@gmail.com" className="hover:text-white transition-colors">
+                    ✉️ hpiharamayan@gmail.com
+                  </a>
+                </p>
                 <p>📍 Essential School, Bongabon Nueva Ecija</p>
               </div>
             </div>

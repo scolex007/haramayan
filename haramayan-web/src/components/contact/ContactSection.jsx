@@ -19,6 +19,9 @@ export default function ContactSection() {
             Or call us directly: <span className="font-semibold text-primary-700">📱 0995-389-5071</span>
           </p>
           <p className="text-sm mt-1">
+            Email: <a href="mailto:hpiharamayan@gmail.com" className="font-semibold text-primary-700 hover:underline">hpiharamayan@gmail.com</a>
+          </p>
+          <p className="text-sm mt-1">
             Contact Person: Javier Garde
           </p>
         </div>
