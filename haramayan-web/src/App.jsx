@@ -248,6 +248,42 @@ function App() {
         </div>
       </section>
 
+      {/* CLPM Partnership Announcement Banner */}
+      <section className="py-8 bg-gradient-to-r from-primary-50 to-primary-100 border-l-4 border-primary-600">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-center md:text-left">
+            {/* Icon */}
+            <div className="flex-shrink-0">
+              <div className="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center">
+                <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+              </div>
+            </div>
+
+            {/* Content */}
+            <div className="flex-1">
+              <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
+                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-amber-100 text-amber-800">
+                  NEW 2025
+                </span>
+                <h3 className="text-lg font-bold text-gray-900">
+                  ✝️ United in Faith, Strengthened in Service
+                </h3>
+              </div>
+              <p className="text-gray-700 leading-relaxed">
+                The newly formed <strong>Central Luzon Provinces Mission</strong> of the Seventh-day Adventist Church
+                has recognized and placed their trust in HPIO as a supporting ministry.
+              </p>
+              <p className="text-gray-600 text-sm mt-2 italic">
+                Together, we continue to answer the call to "love your neighbor as yourself" —
+                serving our community with compassion, integrity, and unwavering faith.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Why Choose HIM Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -264,7 +300,7 @@ function App() {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Recognized and Trusted</h3>
               <p className="text-gray-700">
-                Acknowledged by Central Luzon Conference (CLC) since 2015 as an authentic supporting ministry
+                Acknowledged by Central Luzon Conference (CLC) since 2015, and now trusted by the newly formed Central Luzon Provinces Mission (CLPM)
               </p>
             </div>
 
@@ -543,11 +579,19 @@ function App() {
             {/* Recognition */}
             <div className="bg-white border-2 border-primary-200 p-8 rounded-lg">
               <h3 className="text-2xl font-bold text-center text-gray-900 mb-6">Recognition and Trust</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 text-center">
                 <div>
                   <div className="text-4xl mb-2">✓</div>
                   <h4 className="font-bold text-gray-900 mb-2">CLC Supporting Ministry</h4>
                   <p className="text-gray-700 text-sm">Officially recognized since 2015</p>
+                </div>
+                <div className="relative">
+                  <span className="absolute -top-2 -right-2 inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-amber-100 text-amber-800">
+                    NEW 2025
+                  </span>
+                  <div className="text-4xl mb-2">🤝</div>
+                  <h4 className="font-bold text-gray-900 mb-2">CLPM Partnership</h4>
+                  <p className="text-gray-700 text-sm">Recognized and trusted by the newly formed Central Luzon Provinces Mission</p>
                 </div>
                 <div>
                   <div className="text-4xl mb-2">🎉</div>
@@ -1029,7 +1073,7 @@ function App() {
           </div>
           <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
             <p>&copy; {new Date().getFullYear()} HIM Plus International Organization. All rights reserved.</p>
-            <p className="mt-2">Recognized by Central Luzon Conference since 2015</p>
+            <p className="mt-2">Recognized by Central Luzon Conference (CLC) since 2015 & Central Luzon Provinces Mission (CLPM) 2025</p>
           </div>
         </div>
       </footer>
