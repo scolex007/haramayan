@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import TestimonialsSection from './components/testimonials/TestimonialsSection';
 import ContactSection from './components/contact/ContactSection';
+import BenefitsSection from './components/benefits/BenefitsSection';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,7 +10,7 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'testimonials', 'programs', 'membership', 'contact'];
+      const sections = ['home', 'about', 'testimonials', 'programs', 'benefits', 'membership', 'contact'];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
@@ -90,6 +91,14 @@ function App() {
                 Programs
               </button>
               <button
+                onClick={() => scrollToSection('benefits')}
+                className={`text-sm font-medium transition-colors ${
+                  activeSection === 'benefits' ? 'text-primary-600' : 'text-gray-700 hover:text-primary-600'
+                }`}
+              >
+                Benefits
+              </button>
+              <button
                 onClick={() => scrollToSection('membership')}
                 className={`text-sm font-medium transition-colors ${
                   activeSection === 'membership' ? 'text-primary-600' : 'text-gray-700 hover:text-primary-600'
@@ -168,6 +177,12 @@ function App() {
                 className="block w-full text-left px-3 py-2 text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-md"
               >
                 Programs
+              </button>
+              <button
+                onClick={() => scrollToSection('benefits')}
+                className="block w-full text-left px-3 py-2 text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-md"
+              >
+                Benefits
               </button>
               <button
                 onClick={() => scrollToSection('membership')}
@@ -800,6 +815,9 @@ function App() {
         </div>
       </section>
 
+      {/* Benefits Section */}
+      <BenefitsSection />
+
       {/* Claim Process Flow Section */}
       <section className="py-20 bg-primary-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1046,6 +1064,9 @@ function App() {
                 </button>
                 <button onClick={() => scrollToSection('programs')} className="block text-gray-400 hover:text-white">
                   Programs
+                </button>
+                <button onClick={() => scrollToSection('benefits')} className="block text-gray-400 hover:text-white">
+                  Benefits
                 </button>
                 <button onClick={() => scrollToSection('membership')} className="block text-gray-400 hover:text-white">
                   Membership
