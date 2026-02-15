@@ -45,37 +45,50 @@ export default function BracketCard({ bracket, label, accountType, multiplier, i
         <p className="text-3xl font-bold text-primary-700">{formatPeso(baseAmount)}</p>
       </div>
 
-      {/* Severity breakdown */}
-      <div className="space-y-2 border-t border-gray-100 pt-4">
-        <div className="flex justify-between items-center">
-          <span className="text-sm text-gray-600 flex items-center gap-1.5">
-            <span className="w-2 h-2 rounded-full bg-red-500 inline-block"></span>
-            Severe
-          </span>
-          <span className="text-sm font-semibold text-gray-900">{formatPeso(severeAmount)}</span>
+      {/* Severity breakdown or Funeral flat payout */}
+      {isFuneral ? (
+        <div className="border-t border-gray-100 pt-4">
+          <div className="flex justify-between items-center">
+            <span className="text-sm text-gray-600 flex items-center gap-1.5">
+              <span className="w-2 h-2 rounded-full bg-amber-500 inline-block"></span>
+              Funeral Benefit
+            </span>
+            <span className="text-sm font-semibold text-gray-900">{formatPeso(baseAmount)}</span>
+          </div>
+          <p className="text-xs text-gray-400 mt-2">Flat payout — no severity tiers</p>
         </div>
-        <div className="flex justify-between items-center">
-          <span className="text-sm text-gray-600 flex items-center gap-1.5">
-            <span className="w-2 h-2 rounded-full bg-orange-500 inline-block"></span>
-            Moderate
-          </span>
-          <span className="text-sm font-semibold text-gray-900">{formatPeso(moderateAmount)}</span>
+      ) : (
+        <div className="space-y-2 border-t border-gray-100 pt-4">
+          <div className="flex justify-between items-center">
+            <span className="text-sm text-gray-600 flex items-center gap-1.5">
+              <span className="w-2 h-2 rounded-full bg-red-500 inline-block"></span>
+              Severe
+            </span>
+            <span className="text-sm font-semibold text-gray-900">{formatPeso(severeAmount)}</span>
+          </div>
+          <div className="flex justify-between items-center">
+            <span className="text-sm text-gray-600 flex items-center gap-1.5">
+              <span className="w-2 h-2 rounded-full bg-orange-500 inline-block"></span>
+              Moderate
+            </span>
+            <span className="text-sm font-semibold text-gray-900">{formatPeso(moderateAmount)}</span>
+          </div>
+          <div className="flex justify-between items-center">
+            <span className="text-sm text-gray-600 flex items-center gap-1.5">
+              <span className="w-2 h-2 rounded-full bg-yellow-500 inline-block"></span>
+              Mild
+            </span>
+            <span className="text-sm font-semibold text-gray-900">{formatPeso(mildAmount)}</span>
+          </div>
+          <div className="flex justify-between items-center border-t border-gray-100 pt-2">
+            <span className="text-sm text-gray-600 flex items-center gap-1.5">
+              <span className="w-2 h-2 rounded-full bg-blue-500 inline-block"></span>
+              ER Only
+            </span>
+            <span className="text-sm font-semibold text-gray-900">{formatPeso(erAmount)}</span>
+          </div>
         </div>
-        <div className="flex justify-between items-center">
-          <span className="text-sm text-gray-600 flex items-center gap-1.5">
-            <span className="w-2 h-2 rounded-full bg-yellow-500 inline-block"></span>
-            Mild
-          </span>
-          <span className="text-sm font-semibold text-gray-900">{formatPeso(mildAmount)}</span>
-        </div>
-        <div className="flex justify-between items-center border-t border-gray-100 pt-2">
-          <span className="text-sm text-gray-600 flex items-center gap-1.5">
-            <span className="w-2 h-2 rounded-full bg-blue-500 inline-block"></span>
-            ER Only
-          </span>
-          <span className="text-sm font-semibold text-gray-900">{formatPeso(erAmount)}</span>
-        </div>
-      </div>
+      )}
     </div>
   );
 }

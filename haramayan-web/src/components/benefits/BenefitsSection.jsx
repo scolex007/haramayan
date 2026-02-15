@@ -111,43 +111,48 @@ export default function BenefitsSection() {
             <BenefitsTable
               accountType={accountType}
               multiplier={multiplier}
+              isFuneral={isFuneral}
             />
           </div>
         )}
 
         {/* Info Callouts */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-          <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
-            <h4 className="text-sm font-semibold text-gray-900 mb-2">Hospital Admitted</h4>
-            <div className="space-y-1 text-xs text-gray-600">
-              <div className="flex items-center gap-1.5">
-                <span className="w-2 h-2 rounded-full bg-red-500"></span>
-                Severe — 100% of claimable
-              </div>
-              <div className="flex items-center gap-1.5">
-                <span className="w-2 h-2 rounded-full bg-orange-500"></span>
-                Moderate — 70% of claimable
-              </div>
-              <div className="flex items-center gap-1.5">
-                <span className="w-2 h-2 rounded-full bg-yellow-500"></span>
-                Mild — 50% of claimable
+        <div className={`grid grid-cols-1 ${isFuneral ? 'md:grid-cols-2' : 'md:grid-cols-3'} gap-4 mb-8`}>
+          {!isFuneral && (
+            <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+              <h4 className="text-sm font-semibold text-gray-900 mb-2">Hospital Admitted</h4>
+              <div className="space-y-1 text-xs text-gray-600">
+                <div className="flex items-center gap-1.5">
+                  <span className="w-2 h-2 rounded-full bg-red-500"></span>
+                  Severe — 100% of claimable
+                </div>
+                <div className="flex items-center gap-1.5">
+                  <span className="w-2 h-2 rounded-full bg-orange-500"></span>
+                  Moderate — 70% of claimable
+                </div>
+                <div className="flex items-center gap-1.5">
+                  <span className="w-2 h-2 rounded-full bg-yellow-500"></span>
+                  Mild — 50% of claimable
+                </div>
               </div>
             </div>
-          </div>
+          )}
 
-          <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
-            <h4 className="text-sm font-semibold text-gray-900 mb-2">ER Only (Not Admitted)</h4>
-            <div className="space-y-1 text-xs text-gray-600">
-              <div className="flex items-center gap-1.5">
-                <span className="w-2 h-2 rounded-full bg-blue-500"></span>
-                Principal — 5% of claimable
-              </div>
-              <div className="flex items-center gap-1.5">
-                <span className="w-2 h-2 rounded-full bg-blue-300"></span>
-                Dependent — 2% of claimable
+          {!isFuneral && (
+            <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+              <h4 className="text-sm font-semibold text-gray-900 mb-2">ER Only (Not Admitted)</h4>
+              <div className="space-y-1 text-xs text-gray-600">
+                <div className="flex items-center gap-1.5">
+                  <span className="w-2 h-2 rounded-full bg-blue-500"></span>
+                  Principal — 5% of claimable
+                </div>
+                <div className="flex items-center gap-1.5">
+                  <span className="w-2 h-2 rounded-full bg-blue-300"></span>
+                  Dependent — 2% of claimable
+                </div>
               </div>
             </div>
-          </div>
+          )}
 
           {isFuneral && (
             <div className="bg-amber-50 border border-amber-200 rounded-lg p-4">
