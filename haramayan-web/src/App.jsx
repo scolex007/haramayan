@@ -849,30 +849,78 @@ function App() {
 
           {/* Membership Requirements */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-            <div className="bg-primary-50 p-8 rounded-lg">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Basic Qualifications</h3>
-              <ul className="space-y-3">
-                <li className="flex items-start">
-                  <span className="text-primary-600 mr-2 mt-1">✓</span>
-                  <span className="text-gray-700">No age limit</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary-600 mr-2 mt-1">✓</span>
-                  <span className="text-gray-700">Good health declaration</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary-600 mr-2 mt-1">✓</span>
-                  <span className="text-gray-700">Commitment to regular contributions</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary-600 mr-2 mt-1">✓</span>
-                  <span className="text-gray-700">Agreement with HIM principles and values</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary-600 mr-2 mt-1">✓</span>
-                  <span className="text-gray-700">Submission of required documents</span>
-                </li>
-              </ul>
+            <div className="space-y-6">
+              {/* Registration */}
+              <div className="bg-primary-50 p-6 rounded-lg">
+                <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                  <span className="text-primary-600">📋</span> Registration
+                </h3>
+                <ul className="space-y-2">
+                  <li className="flex items-start">
+                    <span className="text-primary-600 mr-2 mt-1">✓</span>
+                    <span className="text-gray-700">Open to all ages — no age or case restrictions</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-primary-600 mr-2 mt-1">✓</span>
+                    <span className="text-gray-700">You may register once or hold multiple registrations</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Account Types */}
+              <div className="bg-primary-50 p-6 rounded-lg">
+                <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                  <span className="text-primary-600">👥</span> Account Types
+                </h3>
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-3">
+                  <div className="bg-white p-4 rounded-lg text-center border border-primary-100">
+                    <div className="text-2xl mb-2">👨‍👩‍👧‍👦</div>
+                    <div className="font-semibold text-gray-900 mb-1">Family</div>
+                    <div className="text-sm text-gray-600">For married members</div>
+                  </div>
+                  <div className="bg-white p-4 rounded-lg text-center border border-primary-100">
+                    <div className="text-2xl mb-2">🤝</div>
+                    <div className="font-semibold text-gray-900 mb-1">Family Support</div>
+                    <div className="text-sm text-gray-600">For single / unmarried members</div>
+                  </div>
+                  <div className="bg-white p-4 rounded-lg text-center border border-primary-100">
+                    <div className="text-2xl mb-2">👶</div>
+                    <div className="font-semibold text-gray-900 mb-1">Minor</div>
+                    <div className="text-sm text-gray-600">For underage members (registered under a parent or guardian)</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Eligible Dependents */}
+              <div className="bg-primary-50 p-6 rounded-lg">
+                <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                  <span className="text-primary-600">🏠</span> Eligible Dependents
+                </h3>
+                <div className="space-y-3">
+                  <div className="bg-white p-4 rounded-lg border border-primary-100">
+                    <div className="font-semibold text-gray-900 mb-2">Family Account</div>
+                    <ul className="text-sm text-gray-700 space-y-1">
+                      <li className="flex items-start"><span className="text-primary-500 mr-2">•</span>Spouse</li>
+                      <li className="flex items-start"><span className="text-primary-500 mr-2">•</span>All unmarried children aged 18 and below</li>
+                    </ul>
+                    <p className="text-xs text-gray-500 mt-2 italic">Note: Common-law/illegal partners are not eligible as dependents but may register as members. Illegitimate children are eligible as dependents.</p>
+                  </div>
+                  <div className="bg-white p-4 rounded-lg border border-primary-100">
+                    <div className="font-semibold text-gray-900 mb-2">Family Support Account (Unmarried)</div>
+                    <ul className="text-sm text-gray-700 space-y-1">
+                      <li className="flex items-start"><span className="text-primary-500 mr-2">•</span>Parents</li>
+                      <li className="flex items-start"><span className="text-primary-500 mr-2">•</span>All unmarried siblings aged 18 and below</li>
+                    </ul>
+                  </div>
+                  <div className="bg-white p-4 rounded-lg border border-primary-100">
+                    <div className="font-semibold text-gray-900 mb-2">Single Member with No Immediate Family</div>
+                    <ul className="text-sm text-gray-700 space-y-1">
+                      <li className="flex items-start"><span className="text-primary-500 mr-2">•</span>May apply to adopt a dependent (supporting documents required)</li>
+                      <li className="flex items-start"><span className="text-primary-500 mr-2">•</span>Eligible adoptable dependents: grandchildren without parents; aunts or uncles being supported by a single niece/nephew who has no other dependents</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div className="bg-primary-50 p-8 rounded-lg">
@@ -885,6 +933,7 @@ function App() {
                 <div className="bg-white p-4 rounded-lg">
                   <div className="text-3xl font-bold text-primary-700">₱300</div>
                   <div className="text-gray-700">Membership fee (one-time only)</div>
+                  <div className="text-sm text-gray-500 mt-1">Paid online to the HPI BDO Network Bank account. Fee applies again only if you cancel and re-enroll.</div>
                 </div>
               </div>
             </div>
