@@ -38,7 +38,7 @@ export const testimonialsData = {
       date: 'December 13, 2022',
       deceasedName: 'Myra P. Baterzal',
       relationship: 'wife',
-      story: 'Juanario Baterzal Jr. received ₱25,000 from HIM Damayan for burial financial assistance of his wife Myra P. Baterzal.',
+      story: 'Juanario Baterzal Jr. received ₱25,000 from HIM Damayan for burial benefits for his wife Myra P. Baterzal.',
       shortQuote: 'HIM stood with us in our darkest hour',
       featured: true
     },
@@ -83,7 +83,7 @@ export const testimonialsData = {
       benefitType: 'natal',
       amount: 5000,
       date: null,
-      story: 'Jannilyn Tobias received ₱5,000 financial assistance from HIM Damayan (normal delivery)',
+      story: 'Jannilyn Tobias received ₱5,000 in benefits from HIM Damayan (normal delivery)',
       shortQuote: 'Welcoming new life with HIM support',
       featured: false
     },
