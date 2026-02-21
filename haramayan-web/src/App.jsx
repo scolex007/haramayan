@@ -980,8 +980,9 @@ function App() {
                   Does HIM cover pre-existing medical conditions?
                 </summary>
                 <p className="mt-3 text-gray-700">
-                  Absolutely! All pre-existing conditions receive full coverage. Additionally, no age restrictions apply.
-                  However, remember each member accesses assistance twice annually maximum.
+                  Yes! Pre-existing conditions are covered — no age restrictions apply. Please note that only the
+                  claimable benefit amount will be provided, not full coverage of the sickness or medical expenses.
+                  Each member may access assistance twice annually maximum.
                 </p>
               </details>
               <details className="bg-primary-50 p-6 rounded-lg">
