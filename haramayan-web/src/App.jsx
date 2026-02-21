@@ -236,7 +236,8 @@ function App() {
               Haramayan Itinakdang Makatulong (HIM)
             </p>
             <p className="text-lg sm:text-xl text-gray-600 mb-8">
-              The Best Social Welfare Service Program ONLINE
+              The FIRST DAMAYAN ONLINE<br />
+              ( Mutual Aid in Digital Age)
             </p>
             <div className="max-w-3xl mx-auto mb-12">
               <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
@@ -1049,7 +1050,7 @@ function App() {
                 <h3 className="text-xl font-bold">HIM</h3>
               </div>
               <p className="text-gray-400 mb-3">
-                Haramayan Itinakdang Makatulong - The Best Social Welfare Service Program ONLINE
+                Haramayan Itinakdang Makatulong - The FIRST DAMAYAN ONLINE ( Mutual Aid in Digital Age)
               </p>
               <p className="text-gray-400 text-sm">
                 HIM Plus International Organization (HPIO)
