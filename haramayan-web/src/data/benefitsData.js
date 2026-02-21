@@ -1,9 +1,9 @@
 // Bracket data — base amounts (Medical/Accidental/Natal)
 // Funeral multiplier = 2x applied in components
-// All members start at Bracket 10 (no Bracket 1)
+// All members start at Bracket 1
 
 export const brackets = [
-  { bracket: 10,  members: 1000,  principal: 2000,  dependent: 1000  },
+  { bracket: 1,   members: 1000,  principal: 2000,  dependent: 1000  },
   { bracket: 20,  members: 2000,  principal: 4000,  dependent: 2000  },
   { bracket: 30,  members: 3000,  principal: 6000,  dependent: 3000  },
   { bracket: 40,  members: 4000,  principal: 8000,  dependent: 4000  },
@@ -27,5 +27,5 @@ export const programs = [
 export const probationaryContingency = { principal: 2000, dependent: 1000 };
 
 // Spotlight bracket indices for cards
-export const spotlightBrackets = [0, 4, 7]; // Bracket 10, 50, 200
+export const spotlightBrackets = [0, 4, 7]; // Bracket 1, 50, 200
 export const spotlightLabels = ['Starter', 'Growing', 'Maximum'];
