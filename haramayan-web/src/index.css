@@ -73,3 +73,43 @@
     }
   }
 }
+
+/* Print styles for Authorization Waiver Letter */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  .waiver-print-overlay,
+  .waiver-print-overlay * {
+    visibility: visible;
+  }
+
+  .waiver-print-overlay {
+    position: absolute;
+    inset: 0;
+    background: white;
+    overflow: visible;
+    padding: 0;
+  }
+
+  .waiver-print-content {
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  .waiver-no-print {
+    display: none !important;
+  }
+
+  .waiver-input {
+    border: none !important;
+    border-bottom: 1px solid #333 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+}

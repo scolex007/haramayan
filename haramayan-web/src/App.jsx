@@ -2,11 +2,13 @@ import { useState, useEffect } from 'react';
 import TestimonialsSection from './components/testimonials/TestimonialsSection';
 import ContactSection from './components/contact/ContactSection';
 import BenefitsSection from './components/benefits/BenefitsSection';
+import AuthorizationWaiverModal from './components/waiver/AuthorizationWaiverModal';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
   const [showFullStory, setShowFullStory] = useState(false);
+  const [showWaiverModal, setShowWaiverModal] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -1078,6 +1080,9 @@ function App() {
                 <button onClick={() => scrollToSection('membership')} className="block text-gray-400 hover:text-white">
                   Membership
                 </button>
+                <button onClick={() => setShowWaiverModal(true)} className="block text-gray-400 hover:text-white">
+                  Authorization Letter
+                </button>
               </div>
             </div>
             <div>
@@ -1105,6 +1110,8 @@ function App() {
           </div>
         </div>
       </footer>
+
+      <AuthorizationWaiverModal isOpen={showWaiverModal} onClose={() => setShowWaiverModal(false)} />
     </div>
   );
 }
