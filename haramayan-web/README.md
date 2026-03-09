@@ -122,7 +122,7 @@ The project uses a custom green color palette defined in `tailwind.config.js`:
 For more information about HIM:
 - Email: jegessentialcollegesinc@gmail.com
 - Phone: 0995-389-5071
-- Address: Essential School, Bongabon Nueva Ecija
+- Address: Brgy. Palomaria, Bongabon Nueva Ecija
 - Contact Person: Javier Garde
 
 ## License

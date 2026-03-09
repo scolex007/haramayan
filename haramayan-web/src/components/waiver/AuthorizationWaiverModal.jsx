@@ -57,7 +57,7 @@ function AuthorizationWaiverModal({ isOpen, onClose }) {
               HIM PLUS INTERNATIONAL ORGANIZATION
             </h1>
             <p className="text-sm text-gray-500 mt-1">
-              Essential School, Bongabon, Nueva Ecija, Philippines
+              Brgy. Palomaria, Bongabon, Nueva Ecija, Philippines
             </p>
             <p className="text-sm text-gray-500">
               Email: hpiharamayan@gmail.com &nbsp;|&nbsp; Phone: 0995-389-5071

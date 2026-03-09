@@ -1017,7 +1017,7 @@ function App() {
             <div className="space-y-3 mb-6">
               <p className="text-lg">📱 Phone: 0995-389-5071</p>
               <p className="text-lg">✉️ Email: <a href="mailto:hpiharamayan@gmail.com" className="hover:underline">hpiharamayan@gmail.com</a></p>
-              <p className="text-lg">📍 Essential School, Bongabon Nueva Ecija</p>
+              <p className="text-lg">📍 Brgy. Palomaria, Bongabon Nueva Ecija</p>
               <p className="text-lg">Contact Person: Javier Garde</p>
             </div>
             <button
@@ -1100,7 +1100,7 @@ function App() {
                     ✉️ hpiharamayan@gmail.com
                   </a>
                 </p>
-                <p>📍 Essential School, Bongabon Nueva Ecija</p>
+                <p>📍 Brgy. Palomaria, Bongabon Nueva Ecija</p>
               </div>
             </div>
           </div>
