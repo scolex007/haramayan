@@ -904,7 +904,8 @@ function App() {
                     <div className="font-semibold text-gray-900 mb-2">Family Account</div>
                     <ul className="text-sm text-gray-700 space-y-1">
                       <li className="flex items-start"><span className="text-primary-500 mr-2">•</span>Spouse</li>
-                      <li className="flex items-start"><span className="text-primary-500 mr-2">•</span>All unmarried children aged 18 and below</li>
+                      <li className="flex items-start"><span className="text-primary-500 mr-2">•</span>Children aged 18 and below</li>
+                      <li className="flex items-start"><span className="text-primary-500 mr-2">•</span>Must be single (not married)</li>
                     </ul>
                     <p className="text-xs text-gray-500 mt-2 italic">Note: Common-law/illegal partners are not eligible as dependents but may register as members. Illegitimate children are eligible as dependents.</p>
                   </div>
@@ -912,7 +913,8 @@ function App() {
                     <div className="font-semibold text-gray-900 mb-2">Family Support Account (Unmarried)</div>
                     <ul className="text-sm text-gray-700 space-y-1">
                       <li className="flex items-start"><span className="text-primary-500 mr-2">•</span>Parents</li>
-                      <li className="flex items-start"><span className="text-primary-500 mr-2">•</span>All unmarried siblings aged 18 and below</li>
+                      <li className="flex items-start"><span className="text-primary-500 mr-2">•</span>Siblings aged 18 and below</li>
+                      <li className="flex items-start"><span className="text-primary-500 mr-2">•</span>Must be single (not married)</li>
                     </ul>
                   </div>
                   <div className="bg-white p-4 rounded-lg border border-primary-100">
