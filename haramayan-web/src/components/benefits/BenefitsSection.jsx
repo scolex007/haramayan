@@ -21,7 +21,7 @@ export default function BenefitsSection() {
         </h2>
         <p className="text-center text-lg text-gray-600 mb-10 max-w-3xl mx-auto">
           Your benefits increase as more members join HPI. The more the community grows,
-          the greater protection you and your family receive. All members start at Bracket 10.
+          the greater protection you and your family receive. All members start at Bracket 1.
         </p>
 
         {/* Program Toggle */}
@@ -93,7 +93,7 @@ export default function BenefitsSection() {
             onClick={() => setShowTable(!showTable)}
             className="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-primary-700 bg-primary-50 rounded-lg hover:bg-primary-100 transition-colors"
           >
-            <span>{showTable ? 'Hide' : 'View All 8'} Bracket Levels</span>
+            <span>{showTable ? 'Hide' : `View All ${brackets.length}`} Bracket Levels</span>
             <svg
               className={`w-4 h-4 transition-transform ${showTable ? 'rotate-180' : ''}`}
               fill="none"
@@ -228,9 +228,10 @@ export default function BenefitsSection() {
               Starting Bracket
             </summary>
             <p className="mt-3 text-gray-700 text-sm">
-              All members automatically start at <strong>Bracket 10</strong> (up to 1,000 cumulative members).
-              This ensures that post-probation benefits never fall below the probationary contingency amount
-              of ₱{probationaryContingency.principal.toLocaleString()} (Principal) / ₱{probationaryContingency.dependent.toLocaleString()} (Dependent).
+              All members automatically start at <strong>Bracket 1</strong> (1–199 cumulative members).
+              As more members join HPI, the organization advances through higher brackets and everyone's
+              benefits grow together. Once the community reaches 1,000 members, you enter the Standard tier
+              starting at Bracket 10.
             </p>
           </details>
 

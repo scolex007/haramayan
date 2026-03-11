@@ -36,7 +36,7 @@ export default function BracketCard({ bracket, label, accountType, multiplier, i
       {/* Bracket info */}
       <div className="mb-4">
         <p className="text-sm text-gray-500 font-medium">Bracket {bracket.bracket}</p>
-        <p className="text-xs text-gray-400">{bracket.members.toLocaleString()} cumulative members</p>
+        <p className="text-xs text-gray-400">{bracket.memberRange || bracket.members.toLocaleString()} cumulative members</p>
       </div>
 
       {/* Main amount */}
